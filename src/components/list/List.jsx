@@ -3,10 +3,10 @@ import "./List.css";
 import UserInfo from "./userInfo/UserInfo";
 import ChatList from "./chatList/ChatList";
 
-const List = () => {
+const List = ({ setShowDetail }) => {
   return (
     <div className="list">
-      <UserInfo />
+      <UserInfo setShowDetail={setShowDetail} />
       <ChatList />
     </div>
   );

@@ -1,6 +1,7 @@
 .chatList{
     flex: 1;
     overflow: scroll;
+    max-width: 344.8px;
 }
 
 ::-webkit-scrollbar {

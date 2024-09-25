@@ -25,7 +25,7 @@ const Login = () => {
       });
     }
   };
-
+  // console.log(avatar.url);
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);

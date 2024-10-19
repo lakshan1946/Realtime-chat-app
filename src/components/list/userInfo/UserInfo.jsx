@@ -1,24 +1,55 @@
-import React, { useState } from "react";
-import "./userInfo.css";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import * as React from "react";
 import { useUserStore } from "../../lib/userStore";
+import { auth } from "../../lib/firebase";
+import "./userInfo.css";
 
-const UserInfo = ({ setShowDetail }) => {
-  const setShowDetails = () => {
-    setShowDetail((prev) => !prev);
+const UserInfo = () => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
   };
   const { currentUser } = useUserStore();
 
-  // console.log(currentUser);
   return (
     <div className="userInfo">
-      <div className="user" onClick={setShowDetails}>
+      <div className="user">
         <img src={currentUser.avatar || "./avatar.png"} alt="" />
         <h2>{currentUser.username}</h2>
       </div>
       <div className="icons">
-        <img src="./more.png" alt="" />
         <img src="./video.png" alt="" />
         <img src="./edit.png" alt="" />
+        <div>
+          <img
+            id="basic-button"
+            aria-controls={open ? "basic-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+            src="./more.png"
+            alt=""
+          />
+
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              "aria-labelledby": "basic-button",
+            }}
+          >
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>My account</MenuItem>
+            <MenuItem onClick={() => auth.signOut()}>Logout</MenuItem>
+          </Menu>
+        </div>
       </div>
     </div>
   );

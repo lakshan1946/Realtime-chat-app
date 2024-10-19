@@ -20,6 +20,10 @@ This is a real-time chat application built using **React** and **Firebase**. It 
 - **Storage**: Firebase Storage (for storing images)
 - **Real-Time Functionality**: Firebase Realtime Database
 
+## Functinalities
+![image](https://github.com/user-attachments/assets/2c41ec8c-3960-4f47-8362-30b93db4285e)
+
+
 ## Screanshot
 
 ![image](https://github.com/user-attachments/assets/dc07810a-9461-4b16-8fcc-662a707087ae)

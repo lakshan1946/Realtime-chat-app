@@ -21,8 +21,7 @@ This is a real-time chat application built using **React** and **Firebase**. It 
 - **Real-Time Functionality**: Firebase Realtime Database
 
 ## Functinalities
-![image](https://github.com/user-attachments/assets/2c41ec8c-3960-4f47-8362-30b93db4285e)
-
+![image](https://github.com/user-attachments/assets/e3136f47-f183-4b1e-b9f5-d938c287e6cd)
 
 ## Screanshot
 

@@ -23,7 +23,7 @@ This is a real-time chat application built using **React** and **Firebase**. It 
 ## Functinalities
 ![image](https://github.com/user-attachments/assets/4ffa26e9-0e94-4400-96cc-310343f86632)
 
-## Screanshot
+## Screenshot
 
 ![image](https://github.com/user-attachments/assets/dc07810a-9461-4b16-8fcc-662a707087ae)
 ![image](https://github.com/user-attachments/assets/817c08bb-71ef-42eb-8b16-0863327f76f6)
